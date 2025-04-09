@@ -64,13 +64,16 @@ const markdownComponents = {
 		</UnorderedList>
 	),
 	li: ({ children, ...props }) => (
-		<ListItem
+		<Box
+			as="li"
 			mb={1}
+			ml={4}
 			{...props}
 		>
 			{children}
-		</ListItem>
+		</Box>
 	),
+	
 	code: (props) => (
 		<Box
 			as="code"
@@ -267,7 +270,7 @@ function ChatBox() {
 									as="span"
 									className="typing-dots"
 								>
-									💬&nbsp;Thinking<span className="dot">.</span>
+									💬 &nbsp;Thinking<span className="dot">.</span>
 									<span className="dot">.</span>
 									<span className="dot">.</span>
 								</Text>
